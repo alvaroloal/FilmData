@@ -1,0 +1,32 @@
+#parte1 {
+    background-image: url(../../../../public/Diseño\ sin\ título\ \(3\).png);
+    background-size: 100% auto;
+}
+
+#marioMovie {
+    display: flex;
+    align-items: center; 
+    width: 100%;
+}
+
+img{
+    margin-top: -1.5vh;
+    width: 141vh;
+    height: 45vh;
+    border-radius: 0pt 0pt 30pt 30pt;
+    margin-left: 36.5vh;
+}
+
+#titulos{
+    margin-left: 42vh;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    color: white;
+}
+#contenedor{
+    height: 45vh;
+    width: 141vh;
+    background-color: #E5C7FA;
+    margin-left: 38vh;
+    border-radius: 30pt;
+}
