@@ -79,6 +79,32 @@
     </div>    
     <div id="populares">
         <div id="contenedor">
+            <div class="row">
+                @for (actor of actors.slice(0,4); track $index) {
+                    <div class="col-3 mb-5">
+                        <div class="card">
+                            <img *ngIf="actor.profile_path" [src]="'https://image.tmdb.org/t/p/w200' + actor.profile_path" alt="{{ actor.name }}">
+        
+                            <div class="card-body">
+                                <div class="d-flex flex-row-reverse justify-content-between mb-1 mt-3">
+                                    <div>
+                                        <mat-progress-spinner
+                                            class="example-margin"
+                                            [mode]="'determinate'"
+                                            diameter="65"
+                                            [value]="actor.popularity" style="position: relative; bottom: 1.3vh;">
+                                        </mat-progress-spinner>
+                                        <p style="position: relative; left: 1.7vh; bottom: 5vh;">{{actor.popularity / 1000 | percent}}</p>
+                            
+                                    </div>
+                                    <h6>{{actor.name}}</h6>
+
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>    
         </div>
     </div>
     <div id="parteDeFondo"></div>

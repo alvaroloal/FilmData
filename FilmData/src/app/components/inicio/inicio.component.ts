@@ -3,6 +3,8 @@ import { TmdbService } from '../../services/tmdb.service';
 import { Movie } from '../../interfaces/popular-movies-response.interface';
 import { SerieService } from '../../services/serie.service';
 import { Serie } from '../../interfaces/serie.interface';
+import { ActorService } from '../../services/actor.service';
+import { Actor } from '../../interfaces/popular-actors-response.interface';
 
 @Component({
   selector: 'app-inicio',
@@ -13,8 +15,9 @@ export class InicioComponent {
 
   movies: Movie[] = [];
   listaSeries: Serie[] = [];
+  actors: Actor[] = [];
 
-  constructor(private tmdbService: TmdbService, private serieService: SerieService) { }
+  constructor(private tmdbService: TmdbService, private serieService: SerieService, private actorService: ActorService) { }
 
   ngOnInit(): void {
     this.tmdbService.getPopularMovies().subscribe((data) => {
@@ -26,6 +29,14 @@ export class InicioComponent {
 
       this.listaSeries = res.results;
     })
+    this.actorService.getFamousActors().subscribe(
+      (data) => {
+        this.actors = data.results; 
+      },
+      (error) => {
+        console.error('Error fetching actors:', error);
+      }
+    );
   }
 
 
