@@ -44,10 +44,16 @@
     min-height: 10vh;
     background-color: #1E1E1E;
 }
-.tarjetas{
-    display: flex;
+.card{
+    border-radius: 30pt;
+    max-height: 40vh;
+    margin-top: 2vh;
+}
+.card-body{
+    width: 20vh;
 }
 .poster{
-    width: 15vh;
-    height: 20vh;
+    width: 20vh;
+    height: 30vh;
+    border-radius: 30pt;
 }
