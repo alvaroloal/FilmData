@@ -1,4 +1,11 @@
-export interface Result {
+export interface ActorResponse {
+    page: number
+    results: Actor[]
+    total_pages: number
+    total_results: number
+  }
+  
+  export interface Actor {
     adult: boolean
     gender: number
     id: number
@@ -31,3 +38,4 @@ export interface Result {
     first_air_date?: string
     origin_country?: string[]
   }
+  

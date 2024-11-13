@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActorService } from '../../services/actor.service';
+import { Actor } from '../../interfaces/popular-actors-response.interface';
+
 
 @Component({
   selector: 'app-actors',
   templateUrl: './actors.component.html',
-  styleUrl: './actors.component.css'
+  styleUrls: ['./actors.component.css']
 })
-export class ActorsComponent {
+export class ActorsComponent implements OnInit {
+  actors: Actor[] = [];
 
+  constructor(private actorService: ActorService) {}
+
+  ngOnInit(): void {
+    this.actorService.getFamousActors().subscribe(
+      (data) => {
+        this.actors = data.results; 
+      },
+      (error) => {
+        console.error('Error fetching actors:', error);
+      }
+    );
+  }
 }

@@ -1,0 +1,16 @@
+.actors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .actor-card {
+    width: 150px;
+    text-align: center;
+  }
+  
+  .actor-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
