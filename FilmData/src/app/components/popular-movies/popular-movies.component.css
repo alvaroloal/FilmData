@@ -1,0 +1,93 @@
+.movies-container {
+  padding: 20px;
+  background-color: #f7f7f7;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.movies-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  gap: 20px;
+  justify-items: center;
+}
+
+.movie-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  width: 100%; 
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px; 
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.movie-card .card-body {
+  padding: 15px;
+}
+
+.movie-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #444;
+  margin: 10px 0;
+  text-align: center;
+  line-height: 1.3;
+  text-transform: capitalize;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+.movie-title:hover {
+  color: #ff5722;
+}
+
+.movie-rating {
+  font-size: 0.9em;
+  color: #ff9800;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.release-date {
+  font-size: 0.85em;
+  color: #777;
+  margin-top: 8px;
+}
+
+.movie-overview {
+  font-size: 0.9em;
+  color: #666;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 5px;
+}
+
+.movie-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card:hover .movie-title {
+  color: #ff5722;
+}
+

@@ -8,18 +8,21 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MaterialModule } from './modules/material.module';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    NavbarComponent
+    NavbarComponent,
+    PopularMoviesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    MaterialModule
+    MaterialModule,
+    
   ],
   providers: [
     provideClientHydration(),
