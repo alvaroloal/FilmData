@@ -22,5 +22,21 @@ export class ListaSeriesComponent implements OnInit{
     })
   }
 
+  getColor(vote_average: number): string {
+
+    if(vote_average <= 20){
+
+      return "danger";
+    }
+    else if(vote_average <= 50){
+
+      return "warning";
+    }
+    else {
+
+      return "success";
+    }
+  }
+
 
 }

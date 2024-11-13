@@ -1,1 +1,34 @@
-<p>lista-series works!</p>
+
+<h3 class="text-light">Series populares</h3>
+
+<div class="container mt-2">
+    <div class="row">
+        @for (serie of listaSeries; track $index) {
+
+            <div class="col-3 mb-5">
+                <div class="card">
+                    <img [src]="serie.poster_path | imagen" [alt]="'Imagen de la serie ' + serie.name" class="card-img-top">
+
+                    <div class="card-body">
+                        <div class="d-flex flex-row-reverse justify-content-between mb-1 mt-3">
+                            <div>
+                                <mat-progress-spinner
+                                    class="example-margin"
+                                    [mode]="'determinate'"
+                                    diameter="65"
+                                    [value]="serie.vote_average * 10" style="position: relative; bottom: 1.3vh;">
+                                </mat-progress-spinner>
+                                <p style="position: relative; left: 1.7vh; bottom: 5vh;">{{serie.vote_average / 10 | percent}}</p>
+                    
+                            </div>
+                            <h6>{{serie.name}}</h6>
+
+                        </div>
+                        <p class="text-black-50">{{serie.first_air_date | date: "dd/MMM/YYYY"}}</p>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
