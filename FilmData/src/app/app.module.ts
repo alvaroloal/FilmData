@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListaSeriesComponent } from './components/lista-series/lista-series.component';
 import { provideHttpClient } from '@angular/common/http';
 import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
+import { ActorsComponent } from './components/actors/actors.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ImagenPipe } from './pipes/imagen.pipe';
     InicioComponent,
     NavbarComponent,
     PopularMoviesComponent,
+    ActorsComponent,
     ListaSeriesComponent,
     PopularMoviesComponent,
     ImagenPipe
