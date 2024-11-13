@@ -1,25 +1,33 @@
 <div id="parte1">
     <div id="marioMovie" class="p-2">
-        <img src="marioMovie.jpg" alt="marioMovie">
+        <img class="mario" src="marioMovie.jpg" alt="marioMovie">
     </div>
     <div id="contenedor-titulos">
         <h5 id="titulos">Películas Populares</h5>
     </div>    
-    <div id="poulares">
+    <div id="populares">
         <div id="contenedor">
+            <div class="tarjetas d-flex">
+                <div class="col-12 col-md-3" *ngFor="let movie of movies.slice(0, 4)">
+                    <img class="poster" *ngIf="movie.poster_path" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
+                    <h3>{{ movie.title }}</h3>
+                    <p>{{ movie.vote_average | number:'1.1-1' }}</p>
+                    <p>{{ movie.release_date | date: 'd MMM y' }}</p>
+                </div>
+            </div>
         </div>
     </div>
     <div id="contenedor-titulos">
         <h5 id="titulos">Series Populares</h5>
     </div>    
-    <div id="poulares2">
+    <div id="populares">
         <div id="contenedor">
         </div>
     </div>
     <div id="contenedor-titulos">
         <h5 id="titulos">Actores Populares</h5>
     </div>    
-    <div id="poulares3">
+    <div id="populares">
         <div id="contenedor">
         </div>
     </div>

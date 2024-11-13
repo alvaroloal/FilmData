@@ -9,34 +9,23 @@
     justify-content: center;
 }
 
-img{
+.mario{
     width: 141vh;
     height: 45vh;
     border-radius: 0pt 0pt 30pt 30pt;
-    margin-top: -1.5vh;
+    margin-top: -0.8vh;
 }
 
-#poulares{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-#poulares2{
-    margin-top: 2vh;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-#poulares3{
-    margin-top: 5vh;
+#populares{
     display: flex;
     width: 100%;
     justify-content: center;
 }
 #contenedor-titulos{
+    margin-left: 30vh;
     width: 25%;
     display: flex;
-    justify-content: end;
+    justify-content: start;
 }
 #titulos{   
     color: white;
@@ -46,9 +35,19 @@ img{
     height: 45vh;
     width: 141vh;
     background-color: #E5C7FA;
-    border-radius: 30pt;   
+    border-radius: 30pt;  
+    display: flex;
+    justify-content: center;
 }
 #parteDeFondo{
+    margin-top: -3vh;
     min-height: 10vh;
     background-color: #1E1E1E;
+}
+.tarjetas{
+    display: flex;
+}
+.poster{
+    width: 15vh;
+    height: 20vh;
 }

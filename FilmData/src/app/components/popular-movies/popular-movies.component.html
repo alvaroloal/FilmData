@@ -1,12 +1,11 @@
-<div class="movies-container">
-  <h2 class="movies-title">Películas populares</h2>
-  <div class="movies-grid">
-    <div class="movie-card" *ngFor="let movie of movies">
+<div>
+  <h2>Películas populares</h2>
+  <div >
+    <div *ngFor="let movie of movies">
       <img *ngIf="movie.poster_path" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
-      <h3 class="movie-title">{{ movie.title }}</h3>
-      <!--<p class="movie-overview">{{ movie.overview }}</p>--->
-      <p class="movie-rating">⭐Calificación: <strong>{{ movie.vote_average | number:'1.1-1' }}</strong></p>
-      <p class="release-date">📅Estreno: {{ movie.release_date | date: 'd MMM y' }}</p>
+      <h3>{{ movie.title }}</h3>
+      <p>{{ movie.vote_average | number:'1.1-1' }}</p>
+      <p>{{ movie.release_date | date: 'd MMM y' }}</p>
     </div>
   </div>
 </div>

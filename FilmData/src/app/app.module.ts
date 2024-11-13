@@ -21,8 +21,7 @@ import { PopularMoviesComponent } from './components/popular-movies/popular-movi
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    MaterialModule,
-    
+    MaterialModule,   
   ],
   providers: [
     provideClientHydration(),

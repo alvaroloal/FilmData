@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
 
 const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
-  {path: '', redirectTo: '/inicio', pathMatch: 'full'}
+  {path: 'peliculas', component: PopularMoviesComponent},
+  {path: '', redirectTo: '/inicio', pathMatch: 'full'},
+  
 ];
 
 @NgModule({
