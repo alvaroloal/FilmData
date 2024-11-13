@@ -5,28 +5,50 @@
 
 #marioMovie {
     display: flex;
-    align-items: center; 
     width: 100%;
+    justify-content: center;
 }
 
 img{
-    margin-top: -1.5vh;
     width: 141vh;
     height: 45vh;
     border-radius: 0pt 0pt 30pt 30pt;
-    margin-left: 36.5vh;
+    margin-top: -1.5vh;
 }
 
-#titulos{
-    margin-left: 42vh;
-    margin-top: 10vh;
-    margin-bottom: 3vh;
+#poulares{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#poulares2{
+    margin-top: 2vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#poulares3{
+    margin-top: 5vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#contenedor-titulos{
+    width: 25%;
+    display: flex;
+    justify-content: end;
+}
+#titulos{   
     color: white;
+    margin-top: 8vh;
 }
 #contenedor{
     height: 45vh;
     width: 141vh;
     background-color: #E5C7FA;
-    margin-left: 38vh;
-    border-radius: 30pt;
+    border-radius: 30pt;   
+}
+#parteDeFondo{
+    min-height: 10vh;
+    background-color: #1E1E1E;
 }
