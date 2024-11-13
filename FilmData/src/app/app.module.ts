@@ -9,11 +9,13 @@ import { MaterialModule } from './modules/material.module';
 import { ListaSeriesComponent } from './components/lista-series/lista-series.component';
 import { provideHttpClient } from '@angular/common/http';
 import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
+import { ActorsComponent } from './components/actors/actors.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ActorsComponent,
     ListaSeriesComponent,
     PopularMoviesComponent,
     ImagenPipe
