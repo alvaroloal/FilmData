@@ -1,0 +1,111 @@
+<div id="parte1">
+    <div id="marioMovie" class="p-2">
+        <img class="mario" src="marioMovie.jpg" alt="marioMovie">
+    </div>
+    <div id="contenedor-titulos">
+        <h5 id="titulos">Películas Populares</h5>
+    </div>    
+    <div id="populares">
+        <div id="contenedor">
+            <div class="row">
+                @for (movie of movies.slice(0, 4); track $index) {
+        
+                    <div class="col-3 mb-5">
+                        <div class="card">
+                            <img class="poster" *ngIf="movie.poster_path" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
+        
+                            <div class="card-body">
+                                <div class="d-flex flex-row-reverse justify-content-between">
+                                    <div>
+                                        <mat-progress-spinner
+                                            class="example-margin"
+                                            [mode]="'determinate'"
+                                            diameter="35"
+                                            [value]="movie.vote_average * 10">
+                                        </mat-progress-spinner>
+                                        <p class="rating">{{movie.vote_average / 10 | percent}}</p>
+                            
+                                    </div>
+                                    <h6>{{movie.title}}</h6>
+        
+                                </div>
+                                <p class="fecha">{{movie.release_date | date: "dd/MMM/YYYY"}}</p>
+        
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div id="contenedor-titulos">
+        <h5 id="titulos">Series Populares</h5>
+    </div>    
+    <div id="populares">
+        <div id="contenedor">
+            <div class="row">
+                @for (serie of listaSeries.slice(0,4); track $index) {
+        
+                    <div class="col-3 mb-5">
+                        <div class="card">
+                            <img [src]="serie.poster_path | imagen" [alt]="'Imagen de la serie ' + serie.name" class="poster card-img-top">
+        
+                            <div class="card-body">
+                                <div class="d-flex flex-row-reverse justify-content-between">
+                                    <div>
+                                        <mat-progress-spinner
+                                            class="example-margin"
+                                            [mode]="'determinate'"
+                                            diameter="35"
+                                            [value]="serie.vote_average * 10">
+                                        </mat-progress-spinner>
+                                        <p class="rating">{{serie.vote_average / 10 | percent}}</p>
+                            
+                                    </div>
+                                    <h6>{{serie.name}}</h6>
+        
+                                </div>
+                                <p class="fecha">{{serie.first_air_date | date: "dd/MMM/YYYY"}}</p>
+        
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div id="contenedor-titulos">
+        <h5 id="titulos">Actores Populares</h5>
+    </div>    
+    <div id="populares">
+        <div id="contenedor">
+            <div class="row">
+                @for (actor of actors.slice(0,4); track $index) {
+                    <div class="col-3 mb-5">
+                        <div class="card">
+                            <img class="poster" *ngIf="actor.profile_path" [src]="'https://image.tmdb.org/t/p/w200' + actor.profile_path" alt="{{ actor.name }}">
+        
+                            <div class="card-body">
+                                <div class="d-flex flex-row-reverse justify-content-between">
+                                    <div>
+                                        <mat-progress-spinner
+                                            class="example-margin"
+                                            [mode]="'determinate'"
+                                            diameter="35"
+                                            [value]="(actor.popularity / 100)">
+                                        </mat-progress-spinner>
+                                        <p class="rating">{{actor.popularity / 1000 | percent}}</p>
+                            
+                                    </div>
+                                    <h6>{{actor.name}}</h6>
+
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>    
+        </div>
+    </div>
+    <div id="parteDeFondo"></div>
+</div>
