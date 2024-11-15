@@ -13,6 +13,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
 import { ActorsComponent } from './components/actors/actors.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ImagenPipe } from './pipes/imagen.pipe';
     ActorsComponent,
     ListaSeriesComponent,
     PopularMoviesComponent,
-    ImagenPipe
+    ImagenPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
