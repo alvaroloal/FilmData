@@ -18,9 +18,7 @@ export class ActorsComponent implements OnInit {
       (data) => {
         this.actors = data.results; 
       },
-      (error) => {
-        console.error('Error fetching actors:', error);
-      }
+      
     );
   }
 }

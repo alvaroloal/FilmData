@@ -14,7 +14,7 @@ export class PopularMoviesComponent implements OnInit {
 
   ngOnInit(): void {
     this.tmdbService.getPopularMovies().subscribe((data) => {
-      console.log('Datos recibidos:', data);
+     
 
       this.movies = data.results;
     });
