@@ -1,5 +1,5 @@
 #parte1 {
-    background-image: url(../../../../public/Diseño\ sin\ título\ \(3\).png);
+    background-image: url('../../../../public/Diseño\ sin\ título\ \(3\).png');
     background-size: 100% auto;
 }
 
@@ -55,8 +55,8 @@
     margin-top: -1vh;
 }
 .poster{
-    width: 25vh;
-    height: 30vh;
+    width: 30vh;
+    height: 31vh;
     border-radius: 30pt;
 }
 h6{
@@ -64,5 +64,11 @@ h6{
 }
 p{
     font-size: 8pt;
+}
+.rating {
+
+    position: relative;
+    left: 1vh;
+    bottom: 3vh;
 }
 

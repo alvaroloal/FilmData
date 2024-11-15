@@ -23,7 +23,7 @@
                                             diameter="35"
                                             [value]="movie.vote_average * 10">
                                         </mat-progress-spinner>
-                                        <p style="position: relative; left: 1vh; bottom: 4.5vh;">{{movie.vote_average / 10 | percent}}</p>
+                                        <p class="rating">{{movie.vote_average / 10 | percent}}</p>
                             
                                     </div>
                                     <h6>{{movie.title}}</h6>
@@ -57,9 +57,9 @@
                                             class="example-margin"
                                             [mode]="'determinate'"
                                             diameter="35"
-                                            [value]="serie.vote_average * 10" style="position: relative; bottom: 1.3vh;">
+                                            [value]="serie.vote_average * 10">
                                         </mat-progress-spinner>
-                                        <p style="position: relative; left: 1vh; bottom: 5vh;">{{serie.vote_average / 10 | percent}}</p>
+                                        <p class="rating">{{serie.vote_average / 10 | percent}}</p>
                             
                                     </div>
                                     <h6>{{serie.name}}</h6>
@@ -92,9 +92,9 @@
                                             class="example-margin"
                                             [mode]="'determinate'"
                                             diameter="35"
-                                            [value]="actor.popularity" style="position: relative; bottom: 2vh;">
+                                            [value]="(actor.popularity / 100)">
                                         </mat-progress-spinner>
-                                        <p style="position: relative; left: 1vh; bottom: 5.5vh;">{{actor.popularity / 1000 | percent}}</p>
+                                        <p class="rating">{{actor.popularity / 1000 | percent}}</p>
                             
                                     </div>
                                     <h6>{{actor.name}}</h6>
