@@ -1,5 +1,6 @@
-<h2 class="actores-title">Actores populares</h2>
 <div class="actors-list">
+<h2 class="actores-title">Actores populares</h2>
+<div class="actor-grid">
   <div *ngFor="let actor of actors" class="actor-card">
     <img
       class="actor-photo"
@@ -11,4 +12,5 @@
       <span>Popularidad: {{ actor.popularity }}</span>
     </div>
   </div>
+</div>
 </div>

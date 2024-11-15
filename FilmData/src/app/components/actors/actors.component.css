@@ -1,5 +1,10 @@
 .actors-list {
   background-color: #f7f7f7;
+  
+}
+
+.actor-grid{
+
   display: grid;
   grid-template-columns: repeat(5, 1fr); 
   gap: 20px; 
@@ -26,6 +31,7 @@
   text-align: left;
   font-weight: 600;
   letter-spacing: 1px;
+  padding: 20px;
 }
 
 .actor-photo {
