@@ -15,21 +15,21 @@
                             <img class="poster" *ngIf="movie.poster_path" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
         
                             <div class="card-body">
-                                <div class="d-flex flex-row-reverse justify-content-between mb-1 mt-3">
+                                <div class="d-flex flex-row-reverse justify-content-between">
                                     <div>
                                         <mat-progress-spinner
                                             class="example-margin"
                                             [mode]="'determinate'"
-                                            diameter="65"
-                                            [value]="movie.vote_average * 10" style="position: relative; bottom: 1.3vh;">
+                                            diameter="35"
+                                            [value]="movie.vote_average * 10">
                                         </mat-progress-spinner>
-                                        <p style="position: relative; left: 1.7vh; bottom: 5vh;">{{movie.vote_average / 10 | percent}}</p>
+                                        <p class="rating">{{movie.vote_average / 10 | percent}}</p>
                             
                                     </div>
-                                    <a>{{movie.title}}</a>
+                                    <h6>{{movie.title}}</h6>
         
                                 </div>
-                                <p class="text-black-50">{{movie.release_date | date: "dd/MMM/YYYY"}}</p>
+                                <p class="fecha">{{movie.release_date | date: "dd/MMM/YYYY"}}</p>
         
                             </div>
                         </div>
@@ -51,21 +51,21 @@
                             <img [src]="serie.poster_path | imagen" [alt]="'Imagen de la serie ' + serie.name" class="poster card-img-top">
         
                             <div class="card-body">
-                                <div class="d-flex flex-row-reverse justify-content-between mb-1 mt-3">
+                                <div class="d-flex flex-row-reverse justify-content-between">
                                     <div>
                                         <mat-progress-spinner
                                             class="example-margin"
                                             [mode]="'determinate'"
-                                            diameter="65"
-                                            [value]="serie.vote_average * 10" style="position: relative; bottom: 1.3vh;">
+                                            diameter="35"
+                                            [value]="serie.vote_average * 10">
                                         </mat-progress-spinner>
-                                        <p style="position: relative; left: 1.7vh; bottom: 5vh;">{{serie.vote_average / 10 | percent}}</p>
+                                        <p class="rating">{{serie.vote_average / 10 | percent}}</p>
                             
                                     </div>
                                     <h6>{{serie.name}}</h6>
         
                                 </div>
-                                <p class="text-black-50">{{serie.first_air_date | date: "dd/MMM/YYYY"}}</p>
+                                <p class="fecha">{{serie.first_air_date | date: "dd/MMM/YYYY"}}</p>
         
                             </div>
                         </div>
@@ -83,18 +83,18 @@
                 @for (actor of actors.slice(0,4); track $index) {
                     <div class="col-3 mb-5">
                         <div class="card">
-                            <img *ngIf="actor.profile_path" [src]="'https://image.tmdb.org/t/p/w200' + actor.profile_path" alt="{{ actor.name }}">
+                            <img class="poster" *ngIf="actor.profile_path" [src]="'https://image.tmdb.org/t/p/w200' + actor.profile_path" alt="{{ actor.name }}">
         
                             <div class="card-body">
-                                <div class="d-flex flex-row-reverse justify-content-between mb-1 mt-3">
+                                <div class="d-flex flex-row-reverse justify-content-between">
                                     <div>
                                         <mat-progress-spinner
                                             class="example-margin"
                                             [mode]="'determinate'"
-                                            diameter="65"
-                                            [value]="actor.popularity" style="position: relative; bottom: 1.3vh;">
+                                            diameter="35"
+                                            [value]="(actor.popularity / 100)">
                                         </mat-progress-spinner>
-                                        <p style="position: relative; left: 1.7vh; bottom: 5vh;">{{actor.popularity / 1000 | percent}}</p>
+                                        <p class="rating">{{actor.popularity / 1000 | percent}}</p>
                             
                                     </div>
                                     <h6>{{actor.name}}</h6>

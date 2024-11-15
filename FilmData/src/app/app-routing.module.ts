@@ -9,7 +9,8 @@ const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'peliculas', component: PopularMoviesComponent},
   {path: "seriesPopulares", component: ListaSeriesComponent},
-  {path: "actores",component: ActorsComponent},
+  {path: "actores", component: ActorsComponent},
+
   {path: '', redirectTo: '/inicio', pathMatch: 'full'}, 
 ];
 
