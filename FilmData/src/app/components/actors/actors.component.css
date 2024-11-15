@@ -1,16 +1,52 @@
 .actors-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .actor-card {
-    width: 150px;
-    text-align: center;
-  }
-  
-  .actor-card img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
+  background-color: #f7f7f7;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px; 
+  padding: 20px;
+  justify-items: center;
+}
+
+.actor-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 300px; 
+  height: 350px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: center;
+}
+
+.actores-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.actor-photo {
+  border-radius: 50%;
+  width: 170px; 
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.actor-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333333;
+  margin: 10px 0 8px;
+}
+
+.actor-popularity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #4a4a4a;
+}
+
